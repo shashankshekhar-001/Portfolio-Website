@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
     const loader = document.querySelector('.loader');
     setTimeout(() => {
         loader.classList.add('hidden');
-    }, 1000);
+    }, 100);
 });
 
 // Mobile Menu Toggle

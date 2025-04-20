@@ -16,7 +16,7 @@
 </head>
 <body data-theme="dark">
     <!-- Loader -->
-    <!--<div class="loader">
+    <div class="loader">
         <div class="loader-container">
             <div class="loader-dots">
                 <div class="loader-dot"></div>
@@ -26,7 +26,7 @@
         </div>
         <div class="loader-text">Loading</div>
     </div>
--->
+
     <!-- Side Container with Icons -->
     <div class="side-container">
         <div class="side-icon tooltip" data-tooltip="Home"><i class="fa fa-regular fa-heart"></i></div>
@@ -73,13 +73,7 @@
                     <div class="wave"></div>
                     <div class="wave"></div>
                     <div class="wave"></div>
-                    <img class="profile-image" src="picss.png" alt="Shashank Shekhar">
-                    <div class="profile-overlay">
-                        <div class="overlay-content">
-                            <i class="fas fa-camera"></i>
-                            <span>Change Photo</span>
-                        </div>
-                    </div>
+                    <img class="profile-image" src="picss.png" alt="Shashank Shekhar">                 
                 </div>
             </div>
 
@@ -147,16 +141,16 @@
                     </p>
                     <div class="about-stats">
                         <div class="stat-item">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Years Experience</span>
+                            <span class="stat-number">18+</span>
+                            <span class="stat-label">Core Subject</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number">20+</span>
                             <span class="stat-label">Projects Completed</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Happy Clients</span>
+                            <span class="stat-number">01</span>
+                            <span class="stat-label">Internship</span>
                         </div>
                     </div>
                 </div>
@@ -230,18 +224,26 @@
             <div class="education-timeline">
                 <div class="timeline-item" data-aos="fade-right">
                     <div class="timeline-content">
-                        <div class="timeline-date">2020 - 2024</div>
-                        <h3 class="timeline-title">Bachelor of Technology in Computer Science</h3>
-                        <div class="timeline-subtitle">Vellore Institute of Technology, Vellore</div>
-                        <p class="timeline-description">CGPA: 8.5/10</p>
+                        <div class="timeline-date">2022 - 2026</div>
+                        <h3 class="timeline-title">Bachelor of Technology in Electronics and Communication Engineering</h3>
+                        <div class="timeline-subtitle">Central University of Jammu, Jammu & Kashmir</div>
+                        <p class="timeline-description">CGPA: 7.4/10</p>
                     </div>
                 </div>
                 <div class="timeline-item" data-aos="fade-left">
                     <div class="timeline-content">
-                        <div class="timeline-date">2018 - 2020</div>
+                        <div class="timeline-date">2021 - 2022</div>
                         <h3 class="timeline-title">Higher Secondary Education</h3>
-                        <div class="timeline-subtitle">Delhi Public School, Ranchi</div>
-                        <p class="timeline-description">Percentage: 95%</p>
+                        <div class="timeline-subtitle">Gyan Bharti Senior Secondary, Gaya (BIHAR)</div>
+                        <p class="timeline-description">Percentage: 59%</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019 - 2020</div>
+                        <h3 class="timeline-title">Secondary Education</h3>
+                        <div class="timeline-subtitle">Manav Bharti National School, Gaya (BIHAR)</div>
+                        <p class="timeline-description">Percentage: 55.8%</p>
                     </div>
                 </div>
             </div>
@@ -258,9 +260,9 @@
                         <img src="certification1.jpg" alt="Certification 1">
                     </div>
                     <div class="certification-content">
-                        <h3 class="certification-title">Web Development Bootcamp</h3>
-                        <div class="certification-issuer">Udemy</div>
-                        <div class="certification-date">2023</div>
+                        <h3 class="certification-title">Orbital Mechanics- Cube Satellite</h3>
+                        <div class="certification-issuer">IIST </div>
+                        <div class="certification-date">June - July 2024</div>
                         <p class="certification-description">Comprehensive web development course covering HTML, CSS, JavaScript, and modern frameworks.</p>
                         <a href="#" class="certification-link">
                             View Certificate <i class="fas fa-arrow-right"></i>
@@ -275,7 +277,7 @@
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <div class="projects-container">
-            <h2 class="section-title" data-aos="fade-right">My Projects</h2>
+            <h2 class="section-title" data-aos="fade-right">Projects and Workshops</h2>
             
             <div class="projects-grid">
                 <!-- Project Card 1 -->
@@ -314,7 +316,7 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Power Management System</h3>
+                        <h3>Drone Workshop</h3>
                         <p>Efficient power distribution and monitoring system</p>
                         <div class="project-tags">
                             <span>Power Electronics</span>
@@ -373,25 +375,29 @@
             </div>
             <div class="contact-form" data-aos="fade-left">
                 <h2 class="section-title">Send Message</h2>
-                <form>
+                <form id="contactForm" onsubmit="return handleFormSubmit(event)">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required minlength="2" pattern="[A-Za-z\s]+" title="Please enter a valid name">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <input type="text" id="subject" name="subject" required minlength="3">
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" name="message" required minlength="10"></textarea>
                     </div>
-                    <button type="submit" class="submit-button">Send Message</button>
+                    <button type="submit" class="submit-button">
+                        <span class="button-text">Send Message</span>
+                        <span class="button-icon"><i class="fas fa-paper-plane"></i></span>
+                    </button>
                 </form>
+                <div id="formMessage" class="form-message"></div>
             </div>
         </div>
     </section>
